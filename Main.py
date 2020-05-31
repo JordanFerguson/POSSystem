@@ -114,9 +114,9 @@ class Register:
         text.focus_set()
 
         def pay():
-            tender = Decimal(text.get())              #.replace('.', ''))
+            tender = Decimal(text.get())              
             change = tender - self.total
-            label.config(text=f'Change: {self.format_money(change)}. Have a nice day!')        #"{0:.2f}".format
+            label.config(text=f'Change: {self.format_money(change)}. Have a nice day!')        
             self.till += self.total
             self.new_order()
             text.config(state=tk.DISABLED)
